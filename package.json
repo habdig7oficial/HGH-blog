@@ -1,0 +1,26 @@
+{
+  "name": "hgh-blog",
+  "version": "0.0.1",
+  "description": "um blog para a minha ac de História e Geografia ",
+  "main": "hgh.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "hgh.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/habdig7oficial/HGH-blog.git"
+  },
+  "author": "Mateus Felipe da Silveira Vieira",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/habdig7oficial/HGH-blog/issues"
+  },
+  "homepage": "https://github.com/habdig7oficial/HGH-blog#readme",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8"
+  }
+}
