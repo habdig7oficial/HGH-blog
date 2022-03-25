@@ -25,6 +25,4 @@ git status
 
 git commit -m "auto deploy"
 
-git config --global user.email "habdig7@gmail.com"
 
-git push https://github.com/habdig7oficial/ac1-ti.git
