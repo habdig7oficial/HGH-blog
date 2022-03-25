@@ -20,14 +20,18 @@
 
 */
 
-const servidor = require("./config/servidor")
-
-let run_express = servidor.run_express
-
-let porta = servidor.porta
+let dotenv = require("dotenv").config()
 
 
-run_express.listen(porta, function () {
-    console.log(`servidor rodando em http://localhost/${porta}: `)
-})
 
+const mongoose = require("mongoose")
+
+const conexao = async function () {
+
+    /*console.log(process.env.DATA)*/
+
+    let banco_de_dados = await mongoose.connect(process.env.DATA)
+}
+
+
+module.exports = conexao

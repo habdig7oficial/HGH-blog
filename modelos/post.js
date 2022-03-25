@@ -20,14 +20,16 @@
 
 */
 
-const servidor = require("./config/servidor")
 
-let run_express = servidor.run_express
+const mongoose = require("mongoose")
 
-let porta = servidor.porta
-
-
-run_express.listen(porta, function () {
-    console.log(`servidor rodando em http://localhost/${porta}: `)
+const modelo  = mongoose.Schema({
+    username:String,
+    email:String,
+    comentario:String,
+    data:{type: Date, default:Date.now}
 })
 
+const modelo_export = mongoose.model("modelo", modelo)
+
+modelo_export = modelo_export

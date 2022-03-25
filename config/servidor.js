@@ -20,14 +20,16 @@
 
 */
 
-const servidor = require("./config/servidor")
+const express = require("express")
+const run_express = express()
 
-let run_express = servidor.run_express
+run_express.use(express.urlencoded({ extended: false }))
+run_express.use(express.static("./assets/"))
+run_express.set("views","paginas")
 
-let porta = servidor.porta
+const consign = require("consign")
+consign().include("./rotas").into(run_express)
 
+const porta = process.env.PORT || 7777
 
-run_express.listen(porta, function () {
-    console.log(`servidor rodando em http://localhost/${porta}: `)
-})
-
+module.exports = {run_express, porta}
