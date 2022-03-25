@@ -26,3 +26,5 @@ git status
 git commit -m "auto deploy"
 
 
+
+git push https://github.com/habdig7oficial/HGH-blog.git
